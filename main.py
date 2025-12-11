@@ -1,8 +1,5 @@
-from tkinter import *
-from tkinter.ttk import *
+from src.core.game import Game
 
-master = Tk()
-master.geometry("300x200")  # Set window size
-master.title("Main Window")
-
-master.mainloop()
+if __name__ == '__main__':
+    game = Game()
+    game.run()
