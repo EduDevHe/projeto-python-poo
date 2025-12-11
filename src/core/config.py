@@ -5,11 +5,16 @@ import tkinter as tk
 class Config:
 
     def __init__(self):
+
         self.root = tk.Tk()
-        self.root.attributes("-fullscreen", True)
+        # self.root.attributes("-fullscreen", True)
         self.root.title("Snake Game UFOB")
-        self.SCREEN_WIDTH = self.root.winfo_screenwidth()
-        self.SCREEN_HEIGHT = self.root.winfo_screenheight()
+        self.img = tk.PhotoImage(file="assets/gatopitao.png")
+
+        self.SCREEN_WIDTH = 500
+        # self.root.winfo_screenwidth()
+        self.SCREEN_HEIGHT = 500
+        # self.root.winfo_screenheight()
 
         self.canvas = tk.Canvas(
             self.root,
@@ -18,6 +23,12 @@ class Config:
             bg="black"
         )
         self.canvas.pack(fill="both", expand=True)
+
+    def game_over(self):
+        pass
+
+    def update(self):
+        pass
 
     def run(self):
         self.root.mainloop()
