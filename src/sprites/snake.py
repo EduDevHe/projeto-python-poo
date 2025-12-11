@@ -4,7 +4,7 @@ class Snake:
 
         self.snake_body = initial_snake
         self.snake_color = snake_color
-        self.coordinates = [[0, 0], [0, 0]]
+        self.coordinates = [[0, 250], [250, 0]]
         self.body_parts = []
         self._snake_direction = 'right'
         self.snake_size = 10
@@ -18,7 +18,10 @@ class Snake:
     def get_snake_direction(self):
         return self._snake_direction
 
-    def move(self):
+    def snake_grow(self):
+        self.coordinates.append([0, 0])
+
+    def snake_controller(self):
         x, y = self.coordinates[0]
 
         if self._snake_direction == "up":
